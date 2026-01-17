@@ -1,0 +1,65 @@
+body{
+    background: linear-gradient(135deg, black, gray, #bb5405d5);
+  background-attachment: fixed;
+  color: rgba(255, 255, 255, 0.66);
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    
+
+
+}
+
+
+video{width: 90vw; 
+    
+   
+    height: 90vh; 
+    
+    
+    object-fit: contain; 
+    
+    
+    display: block;
+    margin: auto;
+    
+    
+    border: 2px solid #bb5405;
+}
+.btn-retour {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #bb5405; 
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-retour .fleche {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.btn-retour:hover {
+    background: #bb5405; 
+    color: white;
+    box-shadow: 0 0 20px rgba(187, 84, 5, 0.6); 
+    transform: translateY(-2px); 
+}
+
+.btn-retour:hover .fleche {
+    transform: translateX(-5px); 
+}

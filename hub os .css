@@ -1,0 +1,1203 @@
+body {
+    background-color: #000;
+    color: #00ff41; /* Vert Matrix */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*header de style terminal */
+.terminal-header {
+    background: rgba(0, 255, 65, 0.02);
+    border-bottom: 2px solid #00ff41;
+    padding: 20px;
+    margin-bottom: 40px;
+    font-family: 'Courier New', monospace;
+}
+
+.system-path {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.main-title {
+    color: #00ff41;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+    margin: 0;
+}
+
+.status-bar {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #008f11;
+}
+
+.status-item {
+    margin-right: 20px;
+}
+
+.blink-green {
+    color: #00ff41;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+ /* titre partie1 */
+.titregen {
+    color:#00ffff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+}
+
+.prompt {
+    color: #00ff41;
+    font-weight: bold;
+}
+
+
+/* texte d'introduction */
+.intro-text {
+    color: #888; 
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 20px 0 30px 20px;
+    border-left: 2px solid #333;
+    padding-left: 15px;
+    max-width: 800px;
+}
+
+.pulse {
+    color: #00ff41;
+    font-weight: bold;
+    animation: blink-soft 1.5s infinite;
+}
+
+@keyframes blink-soft {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+
+/* des bloc de defintion */
+.grille-definitions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+
+.bloc-def {
+    background: rgba(0, 255, 65, 0.02);
+    border: 1px solid #1a1a1a;
+    padding: 20px;
+    position: relative;
+    opacity: 0; /* Pour l'animation */
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+
+.bloc-def:hover {
+    border-color: #00ff41;
+    background: rgba(0, 255, 65, 0.05);
+}
+
+
+.label {
+    color: #00ffff;
+    font-size: 0.7rem;
+    font-family: monospace;
+    margin-bottom: 10px;
+}
+
+
+.bloc-def h3 {
+    color: #00ff41;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+.bloc-def p {
+    color: #aaddaa;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.part2{
+    margin-top: 60px;
+}
+
+
+/* Titre de section Cyan */
+.titre-partie-2 {
+    color: #00ffff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.6rem;
+    margin: 40px 0 20px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* Grille flexible */
+.diagnostic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+}
+
+/* Style des blocs Modules */
+.module-diag {
+    background: rgba(0, 255, 255, 0.02);
+    border: 1px solid #004444;
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.module-diag:hover {
+    border-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+    background: rgba(0, 255, 255, 0.05);
+}
+
+/* En-tête des blocs (le bandeau Cyan) */
+.header-diag {
+    background: #00ffff;
+    color: #000;
+    font-weight: bold;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+/* Liste de définitions */
+.liste-tech {
+    list-style: none;
+    padding: 0;
+}
+
+.liste-tech li {
+    margin-bottom: 25px;
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-left: 1px solid #004444;
+    padding-left: 15px;
+}
+
+.liste-tech strong {
+    color: #00ff41; /* Mots-clés en Vert Matrix */
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Style des exemples */
+.example {
+    display: block;
+    color: #00ffff; 
+    font-size: 0.8rem;
+    margin-top: 8px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.example::before {
+    content: ">> ";
+}
+
+
+/* Conteneur principal */
+.os-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer l'un sous l'autre sur mobile */
+    gap: 30px;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #000; /* Fond noir pour faire ressortir le néon */
+}
+
+/* Style des cartes */
+.os-card {
+    flex: 1;
+    min-width: 350px; /* Largeur minimum avant de passer à la ligne */
+    max-width: 600px;
+    background: rgba(0, 255, 255, 0.03);
+    border: 1px solid #004444;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.os-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+
+
+/* Conteneur d'image pour garder les proportions */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    filter: brightness(0.9);
+}
+
+/* Description sous l'image */
+.card-desc {
+    color: #00cccc;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    font-family: sans-serif;
+    opacity: 0.8;
+}
+
+/* Media Query pour les petits écrans (Téléphones) */
+@media (max-width: 768px) {
+    .os-card {
+        min-width: 100%;
+    }
+}
+
+
+/* Conteneur principal avec la double bordure cyan */
+.terminal-container2 {
+    background-color: #000000;
+    border: 1px solid #00ffff;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 900px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    outline: 15px solid #000000; /* Crée l'espace entre les deux bordures */
+    
+}
+
+/* Bandeau d'en-tête (Bleu Cyan plein, texte noir) */
+.terminal-header2 {
+    background-color: #00ffff;
+    color: #000000;
+    display: inline-block;
+    padding: 6px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Blocs de contenu */
+.component-block {
+    margin-bottom: 40px;
+}
+
+/* Titres en Vert Matrix */
+.comp-title {
+    color: #00ff00;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* Descriptions en Blanc/Gris clair */
+.comp-text {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Exemples en Bleu Cyan avec le préfixe >> */
+.comp-example {
+    color: #00ffff;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+
+/* Conteneur principal du module 2.0.1 */
+.module-02-0-1 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-frame-system {
+    background-color: #000000;
+    border: 1px solid #00ffff;
+    padding: 30px;
+    max-width: 950px;
+    width: 100%;
+    /* Double bordure cyan */
+    outline: 12px solid #000000;
+    box-shadow: 0 0 0 13px #00ffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* En-tête rectangulaire Cyan */
+.label-header {
+    background-color: #00ffff;
+    color: #000000;
+    display: inline-block;
+    padding: 8px 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Encadrement de la vidéo */
+.video-container-v2 {
+    width: 100%;
+    border: 2px solid #004444;
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.video-container-v2:hover {
+    border-color: #00ffff;
+}
+
+.video-element {
+    width: 100%;
+    display: block;
+    background: #000;
+}
+
+/* Texte sous la vidéo */
+.info-block {
+    margin-top: 20px;
+}
+
+.title-neon {
+    color: #00ff00; /* Vert Matrix */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.text-simple {
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.tag-cyan {
+    color: #00ffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+
+/* Conteneur pour aligner en ligne */
+.astuces-row {
+    display: flex;
+    gap: 20px; /* Espace entre les blocs */
+    justify-content: space-between;
+    padding: 40px;
+    background: #000;
+}
+
+/* Style de chaque bloc d'astuce */
+.system-tip-interactive {
+    flex: 1; /* Chaque astuce prend la même largeur */
+    background: rgba(0, 255, 255, 0.03);
+    border: 1px solid #004444;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 60px; /* Hauteur réduite au repos */
+    overflow: hidden;
+}
+
+.tip-header {
+    color: #00ffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.pulse-icon {
+    color: #00ff00;
+    margin-right: 8px;
+    animation: blink 1.5s infinite;
+}
+
+.tip-content {
+    color: #ffffff;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    margin-top: 15px;
+}
+
+.tip-content strong {
+    color: #00ff00;
+}
+
+.hint-text {
+    color: #444;
+    font-size: 0.7rem;
+    margin-top: 10px;
+}
+
+/* --- EFFET AU SURVOL --- */
+.system-tip-interactive:hover {
+    transform: translateY(-10px); /* Petit saut vers le haut */
+    height: 160px; /* S'agrandit pour laisser lire le texte */
+    border-color: #00ffff;
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    z-index: 10;
+}
+
+.system-tip-interactive:hover .tip-content {
+    opacity: 1;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Responsive : On empile les blocs sur mobile */
+@media (max-width: 768px) {
+    .astuces-row {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Style du conteneur de section */
+.module-02-4 {
+    background-color: #000;
+    padding: 30px;
+    border-left: 1px solid #00ffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.label-header-v2 {
+    background-color: #00ffff;
+    color: #000;
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.system-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Carte interactive verticale */
+.tip-card-vertical {
+    border: 1px solid #004444;
+    padding: 15px;
+    transition: all 0.4s ease;
+    height: 40px; /* Taille fermée */
+    overflow: hidden;
+}
+
+.tip-header {
+    color: #00ff00; /* Vert néon comme ton image */
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Le fameux clignotement */
+.pulse-icon {
+    margin-right: 15px;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.1; }
+}
+
+.tip-content {
+    color: #ffffff;
+    margin-top: 20px;
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tip-content strong {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+.ex-text {
+    color: #00ffff; /* Bleu cyan pour les exemples */
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.hint-text {
+    color: #333;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* EFFET HOVER : Ouverture du bloc */
+.tip-card-vertical:hover {
+    height: 200px; /* S'ajuste selon la longueur du texte */
+    border-color: #00ffff;
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.tip-card-vertical:hover .tip-content {
+    opacity: 1;
+}
+
+
+.table-container {
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid #00ffff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.table-title {
+    color: #00ffff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.cyber-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+.cyber-table th {
+    border-bottom: 2px solid #00ff00; /* Ligne verte pour l'entête */
+    color: #00ff00;
+    padding: 10px;
+    text-align: left;
+}
+
+.cyber-table td {
+    border-bottom: 1px solid #004444;
+    padding: 12px 10px;
+}
+
+/* Effet au survol des lignes */
+.cyber-table tr:hover {
+    background-color: rgba(0, 255, 255, 0.05);
+    color: #00ffff;
+}
+
+
+
+/* Container principal */
+.module-security {
+    background-color: #050000; /* Fond noir tirant vers le rouge */
+    padding: 40px;
+    font-family: 'Courier New', monospace;
+    border: 2px solid #ff0000;
+}
+
+/* Titre Alerte */
+.alert-header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 30px;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+.security-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Cartes de sécurité */
+.security-card {
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px solid #660000;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Style spécifique au Virus */
+.virus-alert .card-header {
+    color: #ff0000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.alert-icon {
+    animation: flash-red 0.8s infinite;
+}
+
+/* Style spécifique à l'Antivirus */
+.shield-active .card-header {
+    color: #00ff00; /* Le bouclier reste vert pour la sécurité */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Textes */
+.card-body p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.card-body strong {
+    color: #ff4444;
+}
+
+/* Tags de statut */
+.example-tag { color: #ff0000; font-size: 0.8rem; margin-top: 10px; }
+.status-tag { color: #00ff00; font-size: 0.8rem; margin-top: 10px; font-weight: bold; }
+
+/* --- ANIMATIONS --- */
+@keyframes flash-red {
+    0%, 100% { opacity: 1; text-shadow: 0 0 10px #ff0000; }
+    50% { opacity: 0.3; text-shadow: none; }
+}
+
+/* Effet Hover */
+.security-card:hover {
+    border-color: #ff0000;
+    background: rgba(255, 0, 0, 0.1);
+    transform: translateX(10px); /* Petit décalage vers la droite */
+}
+
+
+/* --- STYLE GLOBAL DE LA SECTION VIRUS --- */
+.virus-section {
+    background-color: #0a0000;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    padding: 30px;
+    border: 2px solid #ff0000;
+    margin-top: 40px;
+    box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Bannière clignotante en haut */
+.security-banner {
+    background-color: #ff0000;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    animation: alert-pulse 1.5s infinite;
+}
+
+.virus-title {
+    color: #ff4444;
+    border-bottom: 1px solid #ff4444;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.virus-intro {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.virus-intro strong {
+    color: #ff0000;
+    text-transform: uppercase;
+}
+
+/* Grille d'explication */
+.virus-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.virus-card {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px solid #660000;
+    padding: 20px;
+}
+
+.card-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Liste des actions malveillantes */
+.action-list {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-item {
+    padding: 10px;
+    border-left: 4px solid #ff0000;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.action-item strong {
+    color: #ff4444;
+}
+
+/* Footer avec clignotement */
+.danger-footer {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 15px;
+    border: 1px dashed #ff0000;
+    color: #ffaaaa;
+    font-size: 0.9rem;
+}
+
+.blink-red {
+    color: #ff0000;
+    margin-right: 10px;
+    animation: blink-dot 0.8s infinite;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes alert-pulse {
+    0% { background-color: #ff0000; }
+    50% { background-color: #880000; }
+    100% { background-color: #ff0000; }
+}
+
+@keyframes blink-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .virus-grid { flex-direction: column; }
+}
+
+
+/* Container de protection */
+.antivirus-detail-box {
+    border: 2px solid #00ff00;
+    background: rgba(0, 50, 0, 0.2);
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    margin-top: 20px;
+}
+
+.shield-header {
+    color: #00ff00;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Ligne de scan animée */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+    animation: scan-move 3s linear infinite;
+}
+
+.protection-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.method {
+    color: #ffffff;
+    padding-left: 15px;
+    border-left: 2px solid #00ff00;
+}
+
+.method strong {
+    color: #00ff00;
+}
+
+.status-box {
+    margin-top: 25px;
+    background: #002200;
+    color: #00ff00;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    border: 1px dashed #00ff00;
+}
+
+/* Animation du scan */
+@keyframes scan-move {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+.shield-pulse {
+    display: inline-block;
+    animation: shield-beat 2s infinite;
+}
+
+@keyframes shield-beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); text-shadow: 0 0 10px #00ff00; }
+}
+
+
+/* Container de la section */
+.video-module {
+    background-color: #000;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+/* En-tête cyan (comme tes captures d'écran) */
+.label-header-v2 {
+    background-color: #00ffff;
+    color: #000;
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Cadre pour la vidéo locale */
+.video-container-local {
+    border: 2px solid #004444; /* Bordure sombre par défaut */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: #000;
+    transition: all 0.4s ease;
+}
+
+/* Effet au survol */
+.video-container-local:hover {
+    border-color: #00ffff;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+/* Style du lecteur vidéo */
+.video-container-local video {
+    width: 100%; /* La vidéo prend toute la largeur du bloc */
+    display: block;
+    outline: none;
+}
+
+/* Légende en vert néon */
+.video-caption {
+    color: #00ff00;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    padding: 10px;
+    border-left: 3px solid #00ff00;
+    background: rgba(0, 255, 0, 0.05);
+}
+
+/* Point clignotant */
+.pulse-icon {
+    margin-right: 8px;
+    animation: blink-green 1.5s infinite;
+}
+
+@keyframes blink-green {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+
+/* --- BARRE DE NAVIGATION --- */
+.cyber-nav {
+    position: fixed;
+    top: -100px; /* Caché au début pour l'animation */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px); /* Effet de flou moderne */
+    border-bottom: 2px solid #00ffff;
+    z-index: 1000;
+    font-family: 'Courier New', monospace;
+    animation: slideDown 0.8s forwards; /* Animation d'entrée */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Logo avec clignotement */
+.nav-logo {
+    color: #00ffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.blink-dot {
+    color: #00ff00;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+}
+
+/* Liens du menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* EFFET HOVER : Soulignement néon */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    transition: 0.4s;
+}
+
+.nav-links a:hover {
+    color: #00ff00;
+    background: rgba(0, 255, 0, 0.05);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Status Online */
+.nav-status {
+    color: #555;
+    font-size: 0.7rem;
+}
+
+.online {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes slideDown {
+    to { top: 0; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Pour éviter que le contenu soit caché sous le menu fixe */
+body {
+    padding-top: 70px;
+}
+
+
+
+
+.footer-terminal {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000;
+}
+
+.footer-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00ffff, transparent);
+    margin-bottom: 40px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- LE BOUTON --- */
+.btn-return {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #00ffff;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    border: 1px solid #00ffff;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Icône du bouton */
+.btn-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Effet au survol (Hover) */
+.btn-return:hover {
+    color: #000;
+    background-color: #00ffff;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Petite animation de ligne qui passe sur le bouton */
+.btn-return::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s;
+}
+
+.btn-return:hover::before {
+    left: 100%;
+}
+
+.footer-status {
+    margin-top: 20px;
+    color: #004444;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+}
+
+/* --- BOUTON FIXE À GAUCHE --- */
+.btn-float-left {
+    position: fixed;
+    right: 10px;
+    top: 90%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ffff;
+    padding: 10px;
+    width: 35px; /* Largeur fermée */
+    height: 35px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Style de l'icône (Flèche) */
+.nav-icon {
+    color: #00ffff;
+    font-size: 1.5rem;
+    min-width: 35px;
+    text-align: center;
+}
+
+/* Texte caché au début */
+.nav-text {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    margin-left: 10px;
+    transition: opacity 0.3s;
+}
+
+/* --- EFFET HOVER (Quand la souris approche) --- */
+.btn-float-left:hover {
+    width: 180px; /* S'ouvre pour montrer le texte */
+    background: #000;
+    border-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+.btn-float-left:hover .nav-text {
+    opacity: 1;
+}
+
+.btn-float-left:hover .nav-icon {
+    color: #00ff00;
+    animation: bounceLeft 0.8s infinite;
+}
+
+/* Animation de la flèche */
+@keyframes bounceLeft {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+}

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hub reseaux.css">
+    <title>HUB RESEAUX</title>
+    
+    
+
+</head>
+<body>
+    <a href="projet.html" class="btn-home">
+    <span class="icon">🏠</span> Menu</a>
+    <h1>Guide Fondamental des Réseaux Informatiques</h1>
+    <section class="section1">
+        <h2 id="first" class="firsttitle">🌐 Partie 1 : Au Cœur du Bit</h2>
+
+
+       <div class="paraintro">
+    <p class="welcome-text">
+        Bienvenue dans le cœur du monde numérique. 
+        Avant de pouvoir décrypter comment les réseaux mondiaux s'articulent et s'échangent des données 
+        à la vitesse de la lumière, il est impératif de faire un arrêt sur l'unité la plus élémentaire de 
+        l'informatique : <strong>le Bit</strong>. Dans cet univers, tout ce que nous percevons comme complexe — 
+        qu'il s'agisse d'une image haute définition, d'un logiciel sophistiqué ou d'une simple musique — n'est en 
+        réalité qu'une immense symphonie de <strong>0 et de 1</strong>.
+    </p>
+</div>
+
+
+
+        <div class="para1">
+    <p>💡 Explorez les piliers du monde numérique. Cliquez sur les boutons ci-dessous 
+        pour découvrir les unités fondamentales qui permettent à nos ordinateurs de communiquer et de traiter l'information.</p></div>
+    
+    <dialog id="bit">
+        <p>Le <strong>Bit</strong> (Binary Digit) constitue l'atome de l'informatique moderne. 
+        C'est la plus petite unité de mesure de l'information. Par définition, un bit est un 
+        chiffre binaire qui ne peut prendre que deux états distincts : 
+        <strong>0</strong> ou <strong>1</strong>.</p>
+        <img class="imgfloat" src="Gemini_Generated_Image_a45ukha45ukha45u.png" alt="bit">
+        <button class="ok" onclick="bit.close()">J'ai compris</button>
+    </dialog>
+    <dialog id="octet">
+        <p><strong>L'Octet </strong>(ou Byte en anglais) est un regroupement de <strong>8 bits</strong>. C’est l'unité de mesure standard utilisée pour représenter un caractère (une lettre, un chiffre) 
+            ou pour mesurer la taille des fichiers et de la mémoire d'un ordinateur.</p>
+            <img class="imgfloat" src="byteec.png" alt="bit">
+        <button class="ok" onclick="octet.close()">J'ai compris</button>
+    </dialog>
+    <dialog id="bin">
+        <p> <strong>Le système binaire </strong> est un mode de calcul qui n'utilise que deux chiffres : le <strong>0</strong> et le <strong>1</strong>. C'est le langage universel des ordinateurs, car il correspond aux états électriques des composants <strong>(éteint ou allumé)</strong>. En combinant ces deux chiffres, 
+            la machine peut représenter des nombres, des textes, des images et même des vidéos.</p>
+            <img class="imgfloat" src="nombres-binaires-multicolores.webp" alt="bit">
+        <button class="ok" onclick="bin.close()">J'ai compris</button>
+    </dialog>
+
+
+
+
+    <div class="button">
+        <button class="def" onclick="bit.showModal()">Le Bit</button>
+        <button  class="def" onclick="octet.showModal()">L'Octet</button>
+        <button  class="def" onclick="bin.showModal()">Le Binaire</button>
+    </div>
+</section>
+
+<section class="cnv">
+    <a href="decimalversbinaire.html"><img class="photo" src="Gemini_Generated_Image_967o8d967o8d967o.png" alt="lien vers video"></a>
+    <div class="rec1">
+        <p>Pour traduire un nombre habituel (décimal) en langage machine (binaire), on utilise la méthode de la division par 2. 
+        On divise le nombre successivement jusqu'à atteindre zéro, en notant précieusement chaque reste. 
+        Le résultat binaire se lit ensuite en regroupant ces restes, mais attention : 
+        il faut les lire en partant du dernier obtenu jusqu'au premier. 
+        C'est ainsi que l'ordinateur transforme nos chiffres en une suite logique de 0 et de 1.</p>
+    </div>
+    
+
+</section>
+<section class="cnv2">
+    <a href="binaireversdecimal.html"><img class="photo" src="Gemini_Generated_Image_u7d3obu7d3obu7d3.png" alt="lien vers video"></a>
+
+    <div class="rec2">
+        <p>Pour retrouver un nombre décimal à partir du binaire,
+             on utilise une méthode de cumul progressif. 
+             On part du premier chiffre à gauche, puis on avance vers la droite avec une règle simple : 
+             on multiplie le total actuel par 2 et on ajoute le chiffre suivant. On répète l'opération 
+             jusqu'au dernier chiffre. C'est une méthode de calcul rapide qui permet de reconstruire le nombre étape par étape, 
+            comme si on remontait le fil de l'information</p>
+    </div>
+    
+
+</section>
+<section>
+<div class="intro-tableau">
+    <h3>Simulateur de Conversion Binaire</h3>
+    <p>
+        Le système binaire est la base de l'informatique. Chaque colonne ci-dessous représente une 
+        <strong>puissance de 2</strong>. Pour convertir un nombre, placez un <strong>1</strong> (activé) 
+        ou un <strong>0</strong> (désactivé) dans les cases de la dernière ligne.
+    </p>
+    <div class="methode-rapide">
+        <span>💡 <strong>Astuce :</strong> Additionnez uniquement les valeurs des colonnes où vous avez écrit "1".</span>
+    </div>
+</div>
+<div class="table-container">
+    <table class="tableau-binaire">
+        <thead>
+            <tr>
+                <th>2<sup>7</sup></th>
+                <th>2<sup>6</sup></th>
+                <th>2<sup>5</sup></th>
+                <th>2<sup>4</sup></th>
+                <th>2<sup>3</sup></th>
+                <th>2<sup>2</sup></th>
+                <th>2<sup>1</sup></th>
+                <th>2<sup>0</sup></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="valeurs-fixes">
+                <td>128</td>
+                <td>64</td>
+                <td>32</td>
+                <td>16</td>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr class="ligne-input">
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+                <td><input type="text" maxlength="1" placeholder="0"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+</section>
+<div class="conteneur-image">
+    <img src="reflechir3 (1).png" class="image-normale" alt="Réfléchit">
+    
+    <a title="comment faire ?" href="tableaux.html">
+        <img src="Gemini_Generated_Image_rlh28irlh28irlh2-removebg-preview.png" class="image-hover" alt="Idée !"></a>
+</div>
+<div class="astuce-binaire">
+    <p>
+        <span class="emoji-bulb">💡</span> 
+        <strong>Le saviez-vous ?</strong> Les zéros à gauche (ex: <u>0000</u>1001) ne changent pas la valeur du nombre. Ils servent à compléter l'<strong>octet</strong> (8 bits) pour que l'ordinateur puisse lire la donnée correctement.
+    </p>
+</div>
+
+<section>
+
+<section class="osi-intro">
+    <div class="intro-header">
+        <h2 id="second">🌐 Partie 2 : Le Modèle OSI</h2>
+        <p class="subtitle">L'Autoroute de vos Données</p>
+    </div>
+
+    <div class="content-box">
+        <p>Vous savez maintenant manipuler les <strong>bits</strong> et les <strong>octets</strong> grâce au simulateur précédent. Mais une question subsiste :</p>
+        <p class="highlight-question">Comment ces signaux (0 et 1) circulent-ils réellement entre deux ordinateurs ?</p>
+        <p>Pour permettre cette prouesse, les ingénieurs ont créé un langage universel : <strong>le modèle OSI</strong>.</p>
+    </div>
+
+    
+</section>
+
+     <div class="hub-osi-intro-box">
+    <div class="hub-osi-content">
+        <h2 class="hub-osi-title">Qu'est-ce que le Modèle OSI ?</h2>
+        <p class="hub-osi-text">
+            Le <strong>Modèle OSI</strong> (Open Systems Interconnection) est le cadre de référence universel qui régit la communication entre les systèmes informatiques sur un réseau. 
+            Imaginez-le comme un <strong>dictionnaire de règles communes</strong> : il permet à des appareils de marques et de technologies totalement différentes, comme un smartphone Android et un serveur Windows, de se comprendre sans erreur.
+        </p>
+        <p class="hub-osi-text">
+            Pour simplifier ce processus complexe, le modèle décompose chaque échange de données en <strong>sept étapes logiques</strong>, appelées "couches". 
+            Chaque couche a une mission précise : les couches supérieures gèrent l'interface utilisateur, tandis que les couches inférieures (comme la couche <strong>physique binaire</strong>) s'assurent que les signaux circulent correctement dans les câbles.
+        </p>
+    </div>
+</div>
+
+
+
+<section class="osi-intro">
+<div class="analogie-card">
+        <h3>💡 Pourquoi est-ce indispensable ?</h3>
+        <p>Imaginez l'envoi d'une lettre :</p>
+        <ul>
+            <li><strong>La Lettre :</strong> Vos données binaires brutes (les 0 et 1).</li>
+            <li><strong>L'Enveloppe :</strong> L'adresse et les règles d'envoi.</li>
+            <li><strong>Le Facteur :</strong> Les câbles et le Wi-Fi qui transportent le signal.</li>
+        </ul>
+        <p class="summary">C'est la fondation même de l'Internet moderne.</p>
+    </div>
+</section>
+
+
+<div class="video-cyber-container">
+    <div class="video-glow-effect"></div>
+    <div class="video-inner-frame">
+        <video src="Comprendre le Modèle OSI.mp4" controls poster="thamneleosi2.png" class="osivid"></video>
+    </div>
+    <div class="video-caption">
+        <span class="status-dot"></span> ANALYSE DU MODÈLE OSI EN COURS...
+    </div>
+</div>
+
+
+
+
+
+
+<div class="hub-intro-layers">
+    <div class="hub-badge">Architecture Réseau</div>
+    <h2 class="hub-title-main">Le Voyage de la Donnée</h2>
+    <p class="hub-description">
+        Pour que l'information circule, elle doit traverser sept étapes cruciales. 
+        Chaque couche prépare la donnée pour l'étape suivante, de l'application jusqu'au signal <strong>binaire</strong>. 
+        Survolez les blocs ci-dessous pour découvrir le rôle de chaque étage.
+    </p>
+    <div class="hub-scroll-indicator">
+        <span>Explorer les couches</span>
+        <div class="hub-dot"></div>
+    </div>
+</div>
+
+<div class="osi-container">
+    <button  onclick="lay7.showModal()" class="osi-layer "><span>7</span> Application</button>
+    <button  onclick="lay6.showModal()" class="osi-layer "><span>6</span> Présentation</button>
+    <button  onclick="lay5.showModal()" class="osi-layer "><span>5</span> Session</button>
+    <button  onclick="lay4.showModal()" class="osi-layer "><span>4</span> Transport</button>
+    <button  onclick="lay3.showModal()" class="osi-layer "><span>3</span> Réseau</button>
+    <button  onclick="lay2.showModal()" class="osi-layer "><span>2</span> Liaison de données</button>
+    <button  onclick="lay1.showModal()" class="osi-layer  "><span>1</span> Physique (Bits & Binaire)</button>
+</div>
+
+<dialog id="lay7">
+    <p>La Layer 7 <strong>(Application)</strong> est la couche la plus proche de l'utilisateur. Elle sert de point d'entrée pour les applications réseau que vous utilisez au quotidien, comme votre navigateur web ou votre client mail. Son rôle est de fournir les services réseau nécessaires (comme le HTTP ou le SMTP) pour que vos logiciels puissent communiquer sur Internet.</p>
+    <img class="imgfloat" src="Gemini_Generated_Image_bwych8bwych8bwyc.png" alt="">
+    <button class="ok" onclick="lay7.close()">j'ai compris</button>
+</dialog>
+   
+<dialog  id="lay6">
+    <p>La Layer 6 <strong>(Presentation)</strong> agit comme un traducteur universel. Elle s'assure que les données sont présentées dans un format compréhensible par l'application réceptrice. C'est ici que s'effectuent le chiffrement pour la sécurité, ainsi que la compression des données pour réduire leur taille avant l'envoi.</p>
+    <img class="imgfloat" src="Gemini_Generated_Image_qfaod3qfaod3qfao.png" alt="">
+     <button class="ok" onclick="lay6.close()">j'ai compris</button>
+</dialog>
+
+<dialog id="lay5" class="dilayer">
+    <p>La Layer 5 <strong>(Session)</strong> est responsable de la gestion des "conversations" entre deux ordinateurs. Elle ouvre, maintient et ferme les sessions de communication pour s'assurer que les échanges de données restent organisés et synchronisés. Elle permet notamment de reprendre un transfert là où il s'est arrêté en cas de micro-coupure.</p>
+    <img class="imgfloat" src="Gemini_Generated_Image_2646dx2646dx2646.png" alt="">
+    <button class="ok" onclick="lay5.close()">j'ai compris</button>
+</dialog>
+
+<dialog id="lay4" class="dilayer">
+    <p>La Layer 4 <strong>(Transport)</strong> s'occupe de la livraison des données de bout en bout. Elle découpe les gros fichiers en petits segments et vérifie qu'ils arrivent tous à destination sans erreur. C'est elle qui choisit si la connexion doit être ultra-fiable (protocole TCP) ou ultra-rapide (protocole UDP).</p>
+    <img class="imgfloat" src="Gemini_Generated_Image_cety66cety66cety.png" alt="">
+    <button class="ok" onclick="lay4.close()">j'ai compris</button>
+</dialog>
+
+<dialog id="lay3" class="dilayer">
+    <p>La Layer 3 <strong>(Network) </strong> fonctionne comme le GPS de votre réseau. Elle utilise l'adresse IP pour déterminer le meilleur chemin que doivent prendre les paquets de données pour atteindre leur cible finale à travers différents réseaux. C'est à ce niveau que travaillent les routeurs pour diriger le trafic mondial.</p>
+    <img class="imgfloat" src="Gemini_Generated_Image_jmgjzojmgjzojmgj.png" alt="">
+    <button class="ok" onclick="lay3.close()">j'ai compris</button>
+</dialog>
+
+<dialog id="lay2" class="dilayer">
+    <p>La Layer 2 <strong>(Data Link)</strong> gère la communication locale entre deux machines physiquement connectées. Elle organise les données en trames (frames) et utilise l'adresse MAC de votre carte réseau pour identifier précisément l'expéditeur et le destinataire sur un même réseau local. Elle s'occupe aussi de détecter d'éventuelles erreurs physiques de transmission.</p>
+    <img class="imgfloat" src="unnamed.jpg" alt="">
+    <button class="ok" onclick="lay2.close()">j'ai compris</button>
+</dialog>
+
+<dialog id="lay1" class="dilayer">
+    <p>La Layer 1 <strong>(Physical)</strong> est la base concrète du modèle. Son rôle est de convertir les informations numériques en signaux bruts envoyés à travers le matériel. C'est ici que vos données deviennent des bits (0 et 1) transmis sous forme d'impulsions électriques dans les câbles cuivre, de lumière dans la fibre optique ou d'ondes radio pour le Wi-Fi.</p>
+    <img class="imgfloat" src="Gemini_Generated_Image_ineyz8ineyz8iney.png" alt="">
+    <button class="ok" onclick="lay1.close()">j'ai compris</button>  
+</dialog>
+
+<section class="network-stack-section">
+    <div class="network-stack-card">
+        <div class="network-stack-visual">
+            <img src="chemain.png" alt="Architecture OSI 7 Layers" class="stack-img">
+            <div class="stack-badge">Modèle Standard</div>
+        </div>
+        <div class="network-stack-body">
+            <h3 class="stack-title">Architecture des Réseaux</h3>
+            <p class="stack-description">
+                Analyse détaillée de la structure en 7 couches, permettant une communication 
+                interopérable et sécurisée entre systèmes hétérogènes.
+            </p>
+            <div class="stack-footer">
+                <span class="status-dot"></span> Système Actif
+            </div>
+        </div>
+    </div>
+    
+    <section class="stack-protocols-container">
+        <div class="details-intro-block">
+    <div class="orange-divider"></div>
+    <p class="intro-label">Exploration Technique</p>
+    <h2 class="intro-main-title">Voici plus de détails</h2>
+    <p class="intro-paragraph">
+        Plongez dans les profondeurs du réseau. Chaque étape du schéma ci-dessous 
+        révèle les <strong>protocoles essentiels</strong> qui transforment vos données 
+        en signaux concrets, de l'application jusqu'au support physique.
+    </p>
+</div>
+    <div class="stack-grid">
+        <div class="protocol-box l7">
+            <div class="box-tag">Layer 7</div>
+            <h3>HTTP, FTP, SMTP</h3>
+            <p>Le langage pour le <strong>Web</strong>, les <strong>fichiers</strong> et les <strong>emails</strong>.</p>
+        </div>
+
+        <div class="protocol-box l6">
+            <div class="box-tag">Layer 6</div>
+            <h3>SSL / TLS</h3>
+            <p>Les <strong>gardiens</strong> qui chiffrent vos données pour le cadenas de sécurité.</p>
+        </div>
+
+        <div class="protocol-box l5">
+            <div class="box-tag">Layer 5</div>
+            <h3>Sockets</h3>
+            <p>La <strong>prise</strong> qui maintient la discussion ouverte entre deux programmes.</p>
+        </div>
+
+        <div class="protocol-box l4">
+            <div class="box-tag">Layer 4</div>
+            <h3>TCP / UDP</h3>
+            <p>Le livreur <strong>prudent</strong> (TCP) ou le livreur <strong>rapide</strong> (UDP).</p>
+        </div>
+
+        <div class="protocol-box l3">
+            <div class="box-tag">Layer 3</div>
+            <h3>IP & ICMP</h3>
+            <p>Votre <strong>adresse postale</strong> (IP) et le test de connexion (Ping).</p>
+        </div>
+
+        <div class="protocol-box l2">
+            <div class="box-tag">Layer 2</div>
+            <h3>Ethernet & Wi-Fi</h3>
+            <p>La connexion locale, soit par <strong>câble</strong>, soit par <strong>ondes</strong>.</p>
+        </div>
+
+        <div class="protocol-box l1">
+            <div class="box-tag">Layer 1</div>
+            <h3>Fiber</h3>
+            <p>Le transport des données à la <strong>vitesse de la lumière</strong>.</p>
+        </div>
+    </div>
+ </section>
+</section>
+   
+
+
+<section>
+     <div class="tnet-partie-header">
+    <div class="tnet-titre-flex">
+        <h2 class="tnet-titre-orange" id="third">Partie 3 : Le Modèle TCP/IP</h2>
+    </div>
+    <p class="tnet-sous-titre">Le moteur réel d'Internet</p>
+</div>
+
+<div class="tnet-main-container">
+    <div class="tnet-orange-bar"></div>
+    
+    <div class="tnet-section">
+        <p class="tnet-text">
+            Après avoir exploré la théorie avec le modèle OSI, nous abordons maintenant l'aspect pratique. 
+            Le modèle <strong>TCP/IP</strong> est l'architecture concrète qui fait fonctionner Internet aujourd'hui. 
+            Moins détaillé que l'OSI mais beaucoup plus efficace, il regroupe les fonctions essentielles pour 
+            privilégier la rapidité des échanges mondiaux.
+        </p>
+    </div>
+
+    <div class="tnet-card">
+        <h3>Qu'est-ce que le modèle TCP/IP ?</h3>
+        <p>
+            C'est le standard universel qui permet la communication entre tous les ordinateurs. 
+            Contrairement à l'OSI, il est né de la pratique (réseau ARPANET). Il divise le travail en 
+            <strong>4 couches</strong> : l'Application, le Transport, l'Internet et l'Accès Réseau.
+        </p>
+        <p>
+            Alors que le modèle OSI est une construction intellectuelle servant de référence, le modèle <strong>TCP/IP</strong> est le véritable protocole de communication qui a permis la création d'Internet. Conçu pour être robuste et décentralisé, il privilégie l'efficacité opérationnelle à la distinction théorique stricte. Ce modèle est le langage universel qui permet à des milliards d'appareils de types différents de se comprendre instantanément à travers le globe.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="tnet-container">
+    <div class="tnet-orange-bar"></div>
+    
+    <h2 class="tnet-q-title">C'est quoi le TCP et le IP ?</h2>
+
+    <div class="tnet-flex-row">
+        <div class="tnet-info-box">
+            <h3><span class="tnet-tag">IP</span> Internet Protocol</h3>
+            <p>
+                L'<strong>IP</strong> est le responsable de l'<strong>adressage</strong>. Son rôle est de s'assurer que les paquets de données arrivent à la bonne destination, un peu comme le service postal qui lit l'adresse sur une enveloppe.
+            </p>
+            <ul>
+                <li>Identifie chaque machine (Adresse IP).</li>
+                <li>Découpe les données en paquets.</li>
+                <li>Aiguille les paquets à travers les routeurs.</li>
+            </ul>
+        </div>
+
+        <div class="tnet-info-box">
+            <h3><span class="tnet-tag">TCP</span> Transmission Control Protocol</h3>
+            <p>
+                Le <strong>TCP</strong> est le responsable de la <strong>fiabilité</strong>. Il s'assure que le message est complet et sans erreurs. C'est le "contrôleur" qui vérifie que rien n'a été perdu en route.
+            </p>
+            <ul>
+                <li>Vérifie que tous les paquets sont arrivés.</li>
+                <li>Remet les paquets dans le bon ordre.</li>
+                <li>Demande de renvoyer les données perdues.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+<div class="container-image-tech">
+    <img src="chemaintcp.jpg" alt="Modèle TCP/IP" class="img-fluid-tech">
+</div>
+
+    
+    
+
+
+
+
+
+
+<div class="tnet-detailed-section">
+    <div class="tnet-orange-bar"></div>
+    <h2 class="tnet-main-title">Exploration Approfondie : TCP/IP</h2>
+
+    <div class="tnet-grid">
+        <div class="tnet-protocol-card">
+            <h3>1. Couche Application</h3>
+            <p>Ici sont créées les données. Elle utilise des protocoles comme <strong>HTTP/HTTPS</strong> (Web), <strong>DNS</strong> (traduction de noms en IP), et <strong>SMTP</strong> (e-mails).</p>
+        </div>
+        <div class="tnet-protocol-card">
+            <h3>2. Couche Transport</h3>
+            <p>Elle gère la logistique. <strong>TCP</strong> garantit que les données arrivent sans erreur, tandis que <strong>UDP</strong> privilégie la vitesse (streaming).</p>
+        </div>
+        <div class="tnet-protocol-card">
+            <h3>3. Couche Internet</h3>
+            <p>L'aiguillage du réseau. Le protocole <strong>IP</strong> définit l'adressage pour acheminer les paquets vers la bonne destination mondiale.</p>
+        </div>
+        <div class="tnet-protocol-card">
+            <h3>4. Couche Accès Réseau</h3>
+            <p>Le lien physique. Elle gère l'envoi via <strong>Ethernet</strong> ou <strong>Wi-Fi</strong> et utilise <strong>ARP</strong> pour l'adresse physique.</p>
+        </div>
+    </div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<div class="tnet-video-wrapper">
+    <div class="tnet-orange-bar"></div>
+    <h3 class="tnet-video-title">Tutoriel : OSI vs TCP/IP & Identification Réseau</h3>
+
+    <video src="OSI, TCP_IP et Identité Réseau.mp4" class="tnet-custom-video" controls poster="thamnale.jpg"></video>
+
+
+    <div class="tnet-video-footer">
+        <p>Apprenez comment les données circulent et comment l'adresse MAC et l'IP collaborent.</p>
+    </div>
+</div>
+
+
+
+
+
+
+<section>
+<div class="tnet-container">
+    <div class="tnet-comparison-section">
+    <div class="tnet-orange-bar"></div>
+    <h3 class="tnet-table-title">Résumé : OSI vs TCP/IP</h3>
+    
+    <div class="tnet-table-container">
+        <table class="tnet-custom-table">
+            <thead>
+                <tr>
+                    <th>Caractéristique</th>
+                    <th>Modèle OSI</th>
+                    <th>Modèle TCP/IP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tnet-feat">Nombre de couches</td>
+                    <td>7 couches</td>
+                    <td>4 couches</td>
+                </tr>
+                <tr>
+                    <td class="tnet-feat">Nature</td>
+                    <td>Théorique (Modèle de référence)</td>
+                    <td>Pratique (Modèle d'implémentation)</td>
+                </tr>
+                <tr>
+                    <td class="tnet-feat">Utilisation principale</td>
+                    <td>Apprentissage et Diagnostic</td>
+                    <td>Fonctionnement réel d'Internet</td>
+                </tr>
+                <tr>
+                    <td class="tnet-feat">Structure des couches</td>
+                    <td>Couches hautes séparées (7, 6, 5)</td>
+                    <td>Couches hautes combinées en une seule (Application)</td>
+                </tr>
+                <tr>
+                    <td class="tnet-feat">Origine</td>
+                    <td>Standard International (ISO)</td>
+                    <td>Département de la Défense (DoD)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+    <div class="tnet-id-box">
+        <h3>Comment une machine est-elle identifiée ?</h3>
+        <div class="tnet-id-section">
+        <h3>L'Identification sur le Réseau (IP vs MAC)</h3>
+        <p class="tnet-text">
+            Pour qu'un message arrive à bon port, chaque machine possède une double identité. L'<strong>adresse MAC</strong> est l'identifiant physique définitif, comme une empreinte digitale gravée sur votre carte réseau en usine. À l'inverse, l'<strong>adresse IP</strong> est une adresse logique attribuée par le réseau, comparable à une adresse postale qui change si vous déplacez votre ordinateur dans un autre bâtiment.
+        </p>
+        <p class="tnet-text">
+            Enfin, le <strong>masque de sous-réseau</strong> joue un rôle crucial : il permet à votre machine de savoir si elle communique avec un voisin sur le même réseau local ou si elle doit envoyer son paquet vers la <strong>passerelle par défaut</strong> (votre routeur) pour sortir sur l'Internet mondial.
+        </p>
+    </div>
+
+
+
+        <div class="tnet-id-flex">
+            <div class="tnet-id-item">
+                <span class="tnet-label">Adresse MAC</span>
+                <p>Identité <strong>physique</strong> unique gravée sur la carte réseau. Elle ne change jamais.</p>
+            </div>
+            <div class="tnet-id-item">
+                <span class="tnet-label">Adresse IP</span>
+                <p>Identité <strong>logique</strong> (ex: 192.168.1.1). Elle change selon le réseau où vous êtes connecté.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+
+
+<nav class="tnet-side-nav">
+    <div class="nav-trigger">
+        <span>◀</span>
+    </div>
+    
+    <div class="nav-content">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#first">Partie 1 : Introduction</a></li>
+            <li><a href="#second">Partie 2 : Modèle OSI</a></li>
+            <li><a href="#third">Partie 3 : TCP/IP</a></li>
+            
+        </ul>
+    </div>
+</nav>
+
+     
+
+
+
+
+
+
+</body>
+</html>

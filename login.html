@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>LOG IN</title>
+</head>
+<body>
+    <a href="projet.html" class="btn-back-fixed" title="Retour au menu">
+    <span class="arrow">←</span>
+    <span class="text">QUITTER_AUTH</span>
+</a>
+
+<div class="login-wrapper">
+    <div class="login-box">
+        <div class="data-header">
+            <div class="pulse-ring"></div>
+            <h2>DATA_CENTER ACCESS</h2>
+        </div>
+        
+        <form class="login-form">
+            <div class="input-group">
+                <input type="text" id="user" required>
+                <label for="user">IDENTIFIANT_ID</label>
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="pass" required>
+                <label for="pass">CODE_ACCÈS</label>
+                <div class="bar"></div>
+            </div>
+
+            <button type="submit" class="login-btn">
+                <span>INITIALISER_CONNEXION</span>
+            </button>
+            
+            <div class="login-footer">
+                <p>Niveau de sécurité : AES-256</p>
+                <a href="#">Problème d'accès ?</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

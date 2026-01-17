@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hub os .css">
+    <title>HUB OS</title>
+</head>
+<body>
+    <header class="terminal-header" id="partie1">
+    <div class="system-path">root@user:~/modules/os_arch</div>
+    <h1 class="main-title" >KERNEL_INFO : Architecture du Système d'Exploitation</h1>
+    <div class="status-bar">
+        <span class="status-item">STATUS: <span class="blink-green">ONLINE</span></span>
+        <span class="status-item">ENCRYPTION: AES-256</span>
+    </div>
+</header>
+
+<section class="part1" >
+
+    <h2 class="titregen" ><span class="prompt">[1]</span> VOCABULAIRE_SYSTÈME : Modules_Fondamentaux</h2>
+    <p class="intro-text">
+    <span class="pulse">></span> Initialisation de la base de données terminologique... [OK]<br>
+    Avant d'explorer l'architecture profonde du noyau, il est impératif de définir les composants critiques qui constituent l'écosystème informatique. Les modules listés ci-dessous représentent les protocoles de base et les interfaces logicielles activés lors de la phase de pré-chargement du système.
+    </p>
+    <div class="grille-definitions">
+        <div class="bloc-def" style="--delay: 1">
+            <div class="label">ID_01</div>
+            <h3>Système Informatique</h3>
+            <p>Un ensemble de moyens matériels (hardware) et logiciels (software) destinés à traiter automatiquement l'information.</p>
+        </div>
+
+        <div class="bloc-def" style="--delay: 2">
+            <div class="label">ID_02</div>
+            <h3>Système d'Exploitation (OS)</h3>
+            <p>Le logiciel de base qui gère les ressources matérielles et fournit des services essentiels aux applications utilisateurs.</p>
+        </div>
+
+        <div class="bloc-def" style="--delay: 3">
+            <div class="label">ID_03</div>
+            <h3>BIOS</h3>
+            <p><strong>Basic Input/Output System</strong>. Le programme stocké dans une puce qui initialise les composants au démarrage.</p>
+        </div>
+
+        <div class="bloc-def" style="--delay: 4">
+            <div class="label">ID_04</div>
+            <h3>L'Autotest (POST)</h3>
+            <p>Procédure automatique du BIOS qui vérifie que le matériel (RAM, CPU, Disque) fonctionne correctement avant de lancer l'OS.</p>
+        </div>
+
+        <div class="bloc-def" style="--delay: 5">
+            <div class="label">ID_05</div>
+            <h3>Le SETUP</h3>
+            <p>Programme intégré au BIOS permettant de configurer manuellement les paramètres système (date, heure, ordre de démarrage).</p>
+        </div>
+    </div>
+
+
+</section>
+
+
+<section class="part2">
+    <h2 class="titregen" id="partie2"><span class="prompt">[02]</span> ARCHITECTURE_ET_FONCTIONS : CORE_LOGIC_</h2>
+
+    <p class="intro-log">
+        <span class="cursor-cyan">></span> Accès au noyau sécurisé... [AUTORISÉ]<br>
+        L'architecture d'un système d'exploitation repose sur une structure modulaire. Cette section détaille les organes internes du système et les modes d'exécution selon les besoins matériels.
+    </p>
+
+    <div class="diagnostic-grid">
+        
+        <div class="module-diag">
+            <div class="header-diag">[02.1] // ANALYSE_LOGICIELLE : COMPOSANTS_d'un-os</div>
+            <ul class="liste-tech">
+                <li>
+                    <strong>Le Noyau (Kernel)</strong>
+                    Le cerveau qui gère la communication entre le matériel (CPU, mémoire) et les logiciels.
+                    <span class="example">Ex: Quand tu cliques sur "Enregistrer", il ordonne au disque dur d'écrire les données.</span>
+                </li>
+                <li>
+                    <strong>Système de fichiers</strong>
+                    L'armoire de rangement qui décide comment les fichiers sont nommés et placés.
+                    <span class="example">Ex: C'est grâce à lui que tu peux créer un dossier "Documents/Informatique".</span>
+                </li>
+                <li>
+                    <strong>Le Shell (L'Interface)</strong>
+                    Le traducteur qui te permet de donner des ordres à l'ordinateur.
+                    <span class="example">Ex: Le Bureau Windows (clics) ou le Terminal (texte).</span>
+                </li>
+                <li>
+                    <strong>Les Pilotes (Drivers)</strong>
+                    Le manuel d'instruction pour que l'OS sache utiliser un matériel spécifique.
+                    <span class="example">Ex: Le logiciel qui permet à l'OS de reconnaître une nouvelle imprimante.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="module-diag">
+            <div class="header-diag">[02.2] // CLASSIFICATION_SYSTÈME : Types_systeme_os</div>
+            <ul class="liste-tech">
+                <li>
+                    <strong>OS Monotâche</strong>
+                    Un système ancien qui ne fait qu'une seule chose à la fois.
+                    <span class="example">Ex: MS-DOS (Impossible d'écouter de la musique en écrivant un texte).</span>
+                </li>
+                <li>
+                    <strong>OS Multitâche</strong>
+                    Le standard moderne qui jongle entre plusieurs programmes en même temps.
+                    <span class="example">Ex: Windows 11 (Naviguer sur le web + Spotify + Word).</span>
+                </li>
+                <li>
+                    <strong>OS Multi-utilisateurs</strong>
+                    Permet à plusieurs personnes d'utiliser la machine simultanément avec des sessions privées.
+                    <span class="example">Ex: Linux sur un serveur partagé par des centaines d'étudiants.</span>
+                </li>
+                <li>
+                    <strong>OS Temps Réel</strong>
+                    Système ultra-rapide conçu pour répondre sans aucun retard (microsecondes).
+                    <span class="example">Ex: Le système des freins ABS ou le pilotage automatique d'un avion.</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <section class="module-02-0-1">
+    <div class="main-frame-system">
+        <div class="label-header">[02.0.1] // MEDIA_SYSTEM : VISUAL_EXPLAINER</div>
+        
+        <div class="video-container-v2">
+            <video controls poster="Gemini_Generated_Image_omws39omws39omws.png" class="video-element">
+                <source src="Les OS expliqués.mp4" type="video/mp4">
+                Lecteur non supporté.
+            </video>
+        </div>
+
+        <div class="description-grid">
+            <div class="info-block">
+                <h3 class="title-neon">SYNTHÈSE VIDÉO</h3>
+                <p class="text-simple">
+                    Cette présentation résume l'interaction entre l'utilisateur et le matériel. 
+                    Elle montre comment l'OS gère les priorités pour éviter les ralentissements.
+                </p>
+                <p class="tag-cyan">>> STATUS: ANALYSE COMPLÈTE</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="os-container">
+    
+    <div class="os-card">
+        
+        <div class="image-wrapper">
+            <img src="os.png" alt="Architecture en couches">
+        </div>
+        <p class="card-desc">Analyse du flux de données de l'utilisateur vers le matériel.</p>
+    </div>
+
+    <div class="os-card">
+        
+        <div class="image-wrapper">
+            <img src="Gemini_Generated_Image_jead3ejead3ejead.png" alt="Modes d'exécution">
+        </div>
+        <p class="card-desc">Différenciation des systèmes selon leur capacité de traitement.</p>
+    </div>
+
+    
+</section>
+<div class="terminal-container2">
+    <div class="terminal-header2">[02.3] // GESTION_DES_RESSOURCES : OPERATIONS_SYSTEME_</div>
+    
+    <div class="terminal-content">
+        
+        <div class="component-block">
+            <h3 class="comp-title">GESTION DU PROCESSEUR (CPU)</h3>
+            <p class="comp-text">Le processeur est le moteur de l'ordinateur, mais il ne peut faire qu'une seule chose à la fois de manière ultra-rapide. L'OS agit comme un chef d'orchestre ou un chronomètre. Il découpe le temps en minuscules fractions et les distribue aux logiciels ouverts. C'est ce qu'on appelle l'ordonnancement. Grâce à cela, vous avez l'impression que tout tourne en même temps : votre musique ne s'arrête pas quand vous ouvrez une page web, car l'OS fait basculer le processeur entre les deux tâches à toute vitesse.</p>
+            <p class="comp-example">>> Ex: Il permet à ton jeu de tourner tout en laissant l'antivirus scanner en arrière-plan.</p>
+        </div>
+
+        <div class="component-block">
+            <h3 class="comp-title">GESTION DE LA MÉMOIRE (RAM)</h3>
+            <p class="comp-text">La RAM est l'espace de travail temporaire de l'ordinateur. Imaginez que chaque logiciel ouvert est un dossier posé sur un bureau. L'OS est le gestionnaire d'espace : il mesure la taille de chaque dossier et s'assure qu'ils ne se chevauchent pas. Sans cette gestion, un logiciel pourrait s'étaler et effacer les données d'un autre, provoquant un plantage. De plus, dès que vous fermez un programme, l'OS "nettoie" immédiatement la place pour que le bureau reste vide et prêt pour le logiciel suivant.</p>
+            <p class="comp-example">>> Ex: Il empêche ton navigateur web d'utiliser toute la mémoire pour éviter que le PC ne rame.</p>
+        </div>
+
+        <div class="component-block">
+            <h3 class="comp-title">GESTION DES PÉRIPHÉRIQUES (I/O)</h3>
+            <p class="comp-text">Un ordinateur communique avec beaucoup d'objets différents (clavier, écran, clé USB, imprimante). L'OS joue ici le rôle d'aiguilleur ou de traducteur. Chaque périphérique parle une "langue" technique différente. L'OS reçoit les signaux (comme un clic de souris) et les traduit pour que le bon logiciel reçoive l'information. Il gère aussi les conflits : si deux documents veulent être imprimés en même temps, c'est l'OS qui les met en file d'attente pour qu'ils sortent dans le bon ordre.</p>
+            <p class="comp-example">>> Ex: Il s'assure que ce que tu tapes au clavier s'affiche dans le bon logiciel.</p>
+        </div>
+
+        <div class="component-block">
+            <h3 class="comp-title">GESTION DE LA SÉCURITÉ</h3>
+            <p class="comp-text">L'OS est le garde du corps de vos données. Son rôle est de surveiller qui a le droit de faire quoi. Il crée des barrières entre les utilisateurs et entre les logiciels pour éviter qu'un virus ne puisse accéder à tout le système. Il vérifie vos autorisations (comme le mot de passe au démarrage) et vous alerte si un programme tente de modifier un fichier vital pour le fonctionnement de la machine. C'est lui qui garantit que vos documents privés restent privés.</p>
+            <p class="comp-example">>> Ex: C'est lui qui te demande ton mot de passe ou qui bloque une application suspecte.</p>
+        </div>
+        <div class="component-block">
+    <h3 class="comp-title">GESTION DES FICHIERS</h3>
+    <p class="comp-text">L'OS agit comme un archiviste. Il organise l'emplacement des données sur le disque pour que vous puissiez les retrouver instantanément.</p>
+    <p class="comp-example">>> Ex: Créer un dossier, renommer une photo ou enregistrer un document Word.</p>
+    </div>
+    </div>
+</div>
+<div class="astuces-row">
+
+    <div class="system-tip-interactive">
+        <div class="tip-header"><span class="pulse-icon">●</span> ASTUCE : DÉCODER I/O</div>
+        <div class="tip-content">
+            <strong>I/O</strong> est le langage des échanges. L'OS gère les flux pour que votre clic <strong>(Entrée)</strong> devienne une action à l'écran <strong>(Sortie)</strong>.
+        </div>
+        <div class="hint-text">Survolez...</div>
+    </div>
+
+    <div class="system-tip-interactive">
+        <div class="tip-header"><span class="pulse-icon">●</span> ASTUCE : RAM vs DISQUE</div>
+        <div class="tip-content">
+            La <strong>RAM</strong> est un bureau de travail (rapide mais temporaire). Le <strong>Disque</strong> est une armoire (lent mais permanent).
+        </div>
+        <div class="hint-text">Survolez...</div>
+    </div>
+
+    <div class="system-tip-interactive">
+        <div class="tip-header"><span class="pulse-icon">●</span> ASTUCE : LE NOYAU</div>
+        <div class="tip-content">
+            Le <strong>Kernel</strong> est la seule partie de l'OS qui parle directement au matériel. C'est le traducteur ultime du système.
+        </div>
+        <div class="hint-text">Survolez...</div>
+    </div>
+
+</div>
+
+<section class="module-02-4">
+    <div class="label-header-v2">[02.4] // GESTION_RESSOURCES : PHYSIQUE_VS_VIRTUEL</div>
+
+    <div class="system-stack">
+        <div class="tip-card-vertical">
+            <div class="tip-header">
+                <span class="pulse-icon">●</span> GESTION MACHINE PHYSIQUE (RÉELLE)
+            </div>
+            <div class="tip-content">
+                La machine physique, souvent appelée "Bare Metal" dans le jargon technique, représente l'équipement matériel brut. C’est l’ensemble des composants que vous pouvez toucher, comme la carte mère, le processeur (CPU) et les barrettes de mémoire (RAM). Dans cette configuration, le système d'exploitation est installé directement sur le disque dur et possède un contrôle total et exclusif sur les ressources. C'est un peu comme une maison individuelle : vous disposez de votre propre terrain et de vos propres canalisations, sans avoir à les partager avec des voisins. La puissance de cet ordinateur est limitée par ce qui est physiquement présent dans le boîtier ; si vous manquez de mémoire pour un jeu ou un logiciel de montage, vous devez physiquement ouvrir la machine pour en ajouter.
+                <p class="ex-text">>> Ex: Votre PC portable avec ses 8 Go de RAM réels.</p>
+            </div>
+            <div class="hint-text">Survolez pour analyser...</div>
+        </div>
+
+        <div class="tip-card-vertical">
+            <div class="tip-header">
+                <span class="pulse-icon">●</span> GESTION MACHINE VIRTUELLE (VM)
+            </div>
+            <div class="tip-content">
+                La machine virtuelle (VM) est une illusion créée par un logiciel spécial sur une machine physique déjà existante. Au lieu d'être un objet concret, c'est un environnement informatique "simulé" qui se comporte comme un ordinateur indépendant. Pour fonctionner, elle emprunte une partie des ressources de la machine réelle (un peu de RAM, un morceau du disque dur). On peut comparer cela à un appartement dans un immeuble : vous avez votre propre espace privé avec votre propre porte (votre OS), mais vous partagez la structure globale et les fondations de l'immeuble (le matériel physique) avec d'autres. L'avantage majeur est la flexibilité : vous pouvez créer ou supprimer une machine virtuelle en quelques clics sans jamais toucher à un tournevis, ce qui est idéal pour tester de nouveaux logiciels ou naviguer sur Internet en toute sécurité.
+                <p class="ex-text">>> Ex: Faire tourner Windows dans une fenêtre sur un Mac.</p>
+            </div>
+            <div class="hint-text">Survolez pour analyser...</div>
+        </div>
+    </div>
+
+
+    <section class="video-module">
+
+
+    <div class="video-container-local">
+        <video controls poster="Gemini_Generated_Image_wth945wth945wth9.png">
+            <source src="Physique vs Virtuelle.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+        </video>
+    </div>
+
+    <div class="video-caption">
+        <span class="pulse-icon">●</span> SOURCE LOCALE : Analyse comparative du matériel et du logiciel.
+    </div>
+</section>
+
+
+    <div class="table-container">
+    <h3 class="table-title">[02.4.T] // COMPARATIF_SYSTEME</h3>
+    <table class="cyber-table">
+        <thead>
+            <tr>
+                <th>PROPRIÉTÉ</th>
+                <th>PHYSIQUE</th>
+                <th>VIRTUELLE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TYPE</td>
+                <td>Matériel réel</td>
+                <td>Logiciel simulé</td>
+            </tr>
+            <tr>
+                <td>PUISSANCE</td>
+                <td>Totale (Fixe)</td>
+                <td>Partagée (Souple)</td>
+            </tr>
+            <tr>
+                <td>SÉCURITÉ</td>
+                <td>Directe</td>
+                <td>Isolée (Bulle)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</section>
+
+
+<section class="module-security">
+    <div class="alert-header" id="partie3">[03.0] // ZONE_DANGER : SÉCURITÉ_SYSTÈME</div>
+
+    <div class="security-container">
+        <div class="security-card virus-alert">
+            <div class="card-header">
+                <span class="alert-icon">⚠</span> MENACE : LES VIRUS
+            </div>
+            <div class="card-body">
+                
+                <p>Un <strong>Virus</strong> est un programme malveillant conçu pour s'infiltrer dans votre machine physique ou virtuelle sans autorisation. Son but est de voler des données, d'espionner ou de détruire vos fichiers.</p>
+                <div class="example-tag">>> Ex: Cheval de Troie, Ransomware (blocage de fichiers).</div>
+            </div>
+        </div>
+
+        <div class="virus-container">
+
+        <div class="virus-grid">
+            <div class="virus-card">
+                <span class="card-icon">📁</span>
+                <h3>MODE D'INFILTRATION</h3>
+                <p>Il se cache dans une photo ou un logiciel gratuit. Dès que tu ouvres le fichier, le virus "se réveille".</p>
+            </div>
+
+            <div class="action-list">
+                <div class="action-item spy">
+                    <strong>ESPIONNER :</strong> Il vole tes mots de passe et tes codes de carte bleue.
+                </div>
+                <div class="action-item destroy">
+                    <strong>DÉTRUIRE :</strong> Il efface tes photos et tes documents de travail.
+                </div>
+                <div class="action-item slow">
+                    <strong>RALENTIR :</strong> Il fatigue ton processeur (CPU), rendant le PC lent et brûlant.
+                </div>
+            </div>
+        </div>
+
+        <div class="danger-footer">
+            <span class="blink-red">●</span> ATTENTION : Un virus peut rester "endormi" des semaines avant de frapper.
+        </div>
+
+        <div class="security-card shield-active">
+            <div class="card-header">
+                <span class="shield-icon">🛡</span> PROTECTION : L'ANTIVIRUS
+            </div>
+            <div class="card-body">
+                <p>L'<strong>Antivirus</strong> agit comme une police du système. Il scanne en permanence la RAM et le disque dur pour repérer les signatures de codes suspects et les mettre en quarantaine avant qu'ils n'attaquent le noyau (Kernel).</p>
+                <div class="status-tag">STATUS : PROTECTION ACTIVE</div>
+            </div>
+               <div class="antivirus-detail-box">
+    <div class="shield-header">
+        <span class="shield-pulse">🛡</span> 
+    </div>
+    
+    <div class="scan-line"></div> <div class="protection-methods">
+        <div class="method">
+            <strong>1. LE SCANNER :</strong> 
+            Il vérifie la signature de chaque fichier comme une pièce d'identité.
+        </div>
+        <div class="method">
+            <strong>2. LA QUARANTAINE :</strong> 
+            Il emprisonne les fichiers suspects dans une zone isolée.
+        </div>
+        <div class="method">
+            <strong>3. LE BOUCLIER :</strong> 
+            Il bloque les sites web dangereux avant même qu'ils ne s'affichent.
+        </div>
+    </div>
+
+    <div class="status-box">
+        BASE DE DONNÉES : MISE À JOUR <br>
+        MENACES DÉTECTÉES : 0
+    </div>
+</div>
+        </div>
+    </div>
+ 
+</section>
+
+
+
+
+
+
+
+
+</section>
+
+
+<nav class="cyber-nav">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <span class="blink-dot">●</span> SYSTEM_OS_LEARN
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#partie1" data-text="RESSOURCES">[1.0] VOCABULAIRE_SYSTÈME</a></li>
+            <li><a href="#partie2" data-text="PHY_VS_VIR">[2.0] ARCHITECTURE_ET_FONCTIONS</a></li>
+            <li><a href="#partie3" data-text="SECURITE">[3.0] SECURITE</a></li>
+        </ul>
+        
+        <div class="nav-status">
+            STATUS: <span class="online">ONLINE</span>
+        </div>
+    </div>
+</nav>
+<footer class="footer-terminal">
+    <div class="footer-line"></div>
+    <a href="#partie1" class="btn-return">
+        <span class="btn-icon">^</span> 
+    RETOUR_EN_HAUT
+        <span class="btn-glitch"></span>
+    </a>
+    <p class="footer-status">SYSTEM_CHECK: 100% SECURE</p>
+</footer>
+
+<a href="projet.html" class="btn-float-left" title="Retour au menu">
+    <div class="nav-icon">⇚</div>
+    <span class="nav-text">MENU_PRINCIPAL</span>
+</a>
+
+
+
+</body>
+</html>

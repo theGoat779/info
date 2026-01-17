@@ -1,0 +1,273 @@
+body {
+  background: linear-gradient(135deg, black, gray, rgba(255, 152, 0, 0.3));
+  background-attachment: fixed;
+  color: rgba(255, 255, 255, 0.66);
+  
+  
+}
+header{text-align: center;color: rgba(255, 152, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.158);
+      height: 100px;
+      width: 70%;
+
+      margin-top: 2cm;
+      border-left: 5px solid rgba(255, 152, 0, 0.3);
+      border-right: 5px solid rgba(255, 152, 0, 0.3);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 80%;
+
+
+      
+      
+
+
+}
+.presentation{background-color: rgba(0, 0, 0, 0.158); 
+            height: 200px;
+            width: 60%;
+            
+            margin-top: 3.5cm;
+            margin-left: 1cm;
+
+
+            background: rgba(255, 255, 255, 0.05); /* Très peu d'opacité */
+            backdrop-filter: blur(10px); /* Floute ce qu'il y a derrière */
+            border: 1px solid rgba(255, 152, 0, 0.3);
+    
+           border-radius: 15px;
+           line-height: 1.8;
+           color: #e0e0e0;
+            
+}
+.presentation p {padding: 20px;}
+.presentation:hover{background-color: rgba(54, 52, 52, 0.214);box-shadow: 10px 10px 10px rgba(255, 153, 0, 0.775);;}
+
+.cards{
+        
+        
+        flex-direction: column;
+        gap: 15px;
+        
+        position: absolute;
+        margin-top: -250px;
+        margin-left: 70%;
+
+        
+}
+
+
+  
+
+
+.card {
+  background: linear-gradient(135deg, #090909, rgba(255, 152, 0, 0.3));
+  height: 100px;
+  width: 200px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+
+  
+}
+
+.card p {
+  font-size: 1em;
+  font-weight: 700;
+  padding: 1cm;
+  color:white;
+
+ 
+}
+.cards a{text-decoration: none;}
+.card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover .card:not(:hover) {
+  transform: scale(0.9, 0.9);
+  filter: blur(10px);
+}
+
+
+
+.tnet-monitor-grid {
+    display: flex;
+    bottom: 0;
+    margin-bottom: 10px;
+    translate: 80%;
+    justify-content: center;
+    position: fixed;
+    justify-content: center;
+    gap: 15px;
+    max-width: 90%;
+}
+
+.monitor-card {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid #bf6a2d; /* Ton orange spécifique */
+    padding: 10px 20px;
+    border-radius: 2px;
+    min-width: 120px;
+    box-shadow: inset 0 0 15px rgba(191, 106, 45, 0.1);
+    text-align: left;
+}
+
+.monitor-card .label {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.monitor-card .value {
+    color: #ff9800;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.sync {
+    animation: pulse-orange 2s infinite;
+}
+
+@keyframes pulse-orange {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+
+
+
+/* Le conteneur fixe au bottom-right */
+.terminal-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 180px;      /* Largeur initiale (rectangle) */
+    height: 40px;      /* Hauteur initiale */
+    background: rgba(15, 15, 15, 0.95);
+    border: 1px solid #bf6a2d; /* Ton orange spécifique */
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(191, 106, 45, 0.2);
+}
+
+/* Header du terminal */
+.terminal-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: #222;
+    border-bottom: 1px solid #333;
+}
+
+.header-text {
+    color: #888;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* Petit point clignotant */
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #ff9800;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px #ff9800;
+    animation: pulse 1.5s infinite;
+}
+
+/* TRANSFORMATION AU HOVER */
+.terminal-container:hover {
+    width: 320px;      /* S'élargit */
+    height: 200px;     /* S'ouvre vers le haut */
+    transform: translateY(-5px); /* Petit saut vers le haut */
+    border-color: #ff9800;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 152, 0, 0.3);
+}
+
+/* Contenu du texte */
+.terminal-content {
+    padding: 15px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    color: #ccc;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.terminal-container:hover .terminal-content {
+    opacity: 1; /* Le texte apparaît seulement quand c'est ouvert */
+}
+
+/* Styles de texte spécifiques */
+.orange-text { color: #ff9800; }
+.line { margin: 0 0 8px 0; white-space: nowrap; }
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.cursor {
+    color: #ff9800;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+
+.lampe-container {
+    position: fixed;
+    width: 30px;
+    height: 100px;
+    cursor: pointer;
+
+}
+.lampe-container img{
+    position: absolute;
+    width:400px;
+    height: 350px;
+    transition: opacity 0.4s ease-in-out; 
+    position: fixed;
+    top: 20px;
+    right: -80px;
+}
+.desactiver {
+    opacity: 0;
+}
+
+.lampe-container:hover .desactiver {
+    opacity: 1;
+   
+}
+.lampe-container:hover .activer {
+    opacity: 0;
+    
+}  
+
+body:has(.lampe-container:hover) {
+    background-color: #1a1510;
+    background-image: radial-gradient(
+        circle at 85% 90%, 
+        rgba(191, 106, 45, 0.25) 0%, 
+        rgba(0, 0, 0, 0) 60%
+    );
+}
+
+
