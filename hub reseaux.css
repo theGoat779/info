@@ -1,6 +1,27 @@
-body{background: linear-gradient(135deg, black, gray, #bb5405d5);
-  background-attachment: fixed;
-  color: rgba(255, 255, 255, 0.66);}
+body {
+   margin: 0;
+    padding: 0;
+    /* Un dégradé qui va d'un gris très sombre vers un orange très profond et doux */
+    background: linear-gradient(135deg, #121212 0%, #482200 50%, #2b1800 100%);
+    background-attachment: fixed;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+@keyframes glisserGaucheDroite {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Commence 100px vers la gauche */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Arrive à sa position normale */
+    }}
+
+.section1{display: inline-block; /* Important pour que la translation fonctionne bien */
+    animation: glisserGaucheDroite 0.8s ease-out forwards;
+    /* Utilisation de ta variable pour l'effet de cascade */
+    animation-delay: calc(var(--delay) * 0.2s);}
+
 .btn-home {
     position: fixed;
     top: 20px;
@@ -32,27 +53,36 @@ body{background: linear-gradient(135deg, black, gray, #bb5405d5);
     box-shadow: 0 0 15px rgba(187, 84, 5, 0.6);
 }
 h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 3rem;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    background: linear-gradient(to right, #ffffff, #ff0000);
-    background-clip: text; 
-    color:transparent;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
-    margin: 2cm;
+    letter-spacing: 2px;
+    /* Dégradé de couleur sur le texte */
+    background: linear-gradient(to right, #ff9d00, #ff5e00);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Ombre légère pour décoller du fond sombre */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .paraintro {
     background: rgba(30, 30, 30, 0.6); 
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 30px;
     backdrop-filter: blur(8px);
     border-left: 5px solid #bb5405;  
+    border-right: 5px solid #bb5405;
     padding: 25px 35px;
-    border-radius: 0 12px 12px 0;
-    margin: 30px 0;
+    border-radius: 12px 12px 12px 12px ;
+    
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .welcome-text {
+
     color: #e0e0e0;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.1rem;
@@ -402,6 +432,7 @@ dialog::backdrop {
 .summary {
     margin-top: 20px;
     font-weight: bold;
+    
     text-align: center;
     color: #888;
 }
@@ -409,6 +440,7 @@ dialog::backdrop {
      color: #bb5405; 
     font-size: 2rem;
     margin-bottom: 5px;
+    margin-left: 35%;
 
 
 }
@@ -777,10 +809,12 @@ dialog::backdrop {
 
 .tnet-titre-orange {
     color: #bb5405; 
+    font-size: 2rem;
+    margin-bottom: 5px;
     font-size: 2.5rem;
     font-weight: 800;
     margin: 0;
-    text-transform: uppercase;
+    
 }
 
 .tnet-sous-titre {
@@ -1448,4 +1482,81 @@ video::-webkit-media-controls-panel {
 
 .img-fluid-tech:hover {
     transform: scale(1.02); /* L'image s'agrandit légèrement au survol */
+}
+
+/* --- CONTENEUR DE LA ZONE --- */
+.access-zone {
+    background: rgba(22, 24, 29, 0.7); /* Gris sombre du simulateur */
+    border: 1px solid #2d3036;
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.access-description h3 {
+    color: #b8860b; /* Or mat */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.access-description p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+/* --- LE BOUTON ANIMÉ --- */
+.cyber-link {
+    position: relative;
+    padding: 15px 40px;
+    background: #0d0e10;
+    color: #b8860b;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #b8860b;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.1);
+}
+
+/* L'animation de balayage (Scanner) */
+.link-scanner {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(184, 134, 11, 0.2), 
+        transparent
+    );
+    animation: scanning 3s infinite;
+}
+
+@keyframes scanning {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: 150%; }
+}
+
+/* --- EFFET AU SURVOL --- */
+.cyber-link:hover {
+    background: #b8860b;
+    color: #0d0e10;
+    box-shadow: 0 0 25px rgba(184, 134, 11, 0.5);
+    transform: translateY(-3px);
+}
+
+.cyber-link:active {
+    transform: translateY(0);
 }

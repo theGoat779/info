@@ -1,0 +1,174 @@
+/* --- LE FOND : EFFET GRILLE DE CIRCUIT --- */
+body {
+    background-color: #0d0e10;
+    /* On crée une grille fine pour simuler un circuit imprimé */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* --- LA CARTE : STRUCTURE MÉTALLIQUE --- */
+.converter-card {
+    background: #16181d;
+    border: 2px solid #2d3036;
+    border-radius: 4px; /* Coins moins arrondis pour un look industriel */
+    padding: 40px;
+    box-shadow: 
+        10px 10px 0px #0a0b0d, /* Ombre portée solide style architecture */
+        0 0 20px rgba(0,0,0,0.5);
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Titre avec aspect "gravé" */
+.converter-card h2 {
+    color: #b8860b; /* Or mat / Bronze */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #b8860b;
+    display: inline-block;
+}
+
+/* --- INPUTS & BOUTONS : LOOK COMPOSANT --- */
+input {
+    background: #0a0b0d;
+    border: 1px solid #3e4249;
+    padding: 12px;
+    color: #b8860b;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    border-radius: 0;
+    outline: none;
+}
+
+button {
+    background: #b8860b;
+    color: #0a0b0d;
+    border: none;
+    padding: 12px 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: #d4a017;
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.4);
+}
+
+/* --- RÉSULTAT : AFFICHAGE ÉLECTRONIQUE --- */
+#resultatBinaire {
+    margin-top: 30px;
+    background: #070809;
+    padding: 20px;
+    border: 1px inset #2d3036;
+    color: #00ffaa; /* Vert LED pour le contraste */
+    font-family: 'Courier New', monospace;}
+
+    .converter-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.converter-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.converter-group label {
+    color: #b8860b;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.separator {
+    color: #b8860b;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(184, 134, 11, 0.5);
+}
+
+/* Style spécifique pour l'input binaire (aspect LED) */
+#binInput {
+    color: #00ffaa;
+    text-shadow: 0 0 5px rgba(0, 255, 170, 0.5);
+    letter-spacing: 2px;
+}
+
+
+/* --- POSITIONNEMENT --- */
+.btn-fixed-retour {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    z-index: 1000;
+    display: inline-block;
+}
+
+/* --- STYLE DU BOUTON --- */
+.btn-content {
+    background: #16181d; /* Gris sombre de ton simulateur */
+    color: #b8860b; /* Or mat */
+    border: 1px solid #b8860b;
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* --- ANIMATION DE PULSATION (SANS JS) --- */
+.btn-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b8860b;
+    filter: blur(15px);
+    opacity: 0.3;
+    z-index: 1;
+    animation: pulse-glow 2s infinite alternate; /* Animation automatique */
+}
+
+@keyframes pulse-glow {
+    from { opacity: 0.1; transform: scale(0.95); }
+    to { opacity: 0.5; transform: scale(1.05); }
+}
+
+/* --- EFFET AU SURVOL --- */
+.btn-fixed-retour:hover .btn-content {
+    background: #b8860b;
+    color: #0d0e10;
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.6);
+}
+
+.btn-fixed-retour:hover .btn-icon {
+    transform: translateX(-5px);
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}

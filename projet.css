@@ -234,19 +234,22 @@ header{text-align: center;color: rgba(255, 152, 0, 0.3);
 
 .lampe-container {
     position: fixed;
-    width: 30px;
-    height: 100px;
+    top: 20px;
+    right: 20px; /* Ajuste pour coller au bord */
+    width: 200px; 
+    height: 130px;
     cursor: pointer;
+    z-index: 1000;
+    /* On cache tout ce qui dépasse pour éviter les clics fantômes */
+    overflow: hidden;
+    
 
 }
 .lampe-container img{
+    width: 200px;
+    display: block;
     position: absolute;
-    width:400px;
-    height: 350px;
-    transition: opacity 0.4s ease-in-out; 
-    position: fixed;
-    top: 20px;
-    right: -80px;
+    transition: opacity 0.3s ease;
 }
 .desactiver {
     opacity: 0;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convertir</title>
+    <link rel="stylesheet" href="convertisseur.css">
+    <script>
+// Conversion : Décimal -> Binaire
+function decToBin() {
+    const decValue = document.getElementById("decInput").value;
+    const binField = document.getElementById("binInput");
+    
+    if (decValue !== "") {
+        // .toString(2) transforme le nombre en base 2
+        binField.value = parseInt(decValue).toString(2);
+    } else {
+        binField.value = "";
+    }
+}
+
+// Conversion : Binaire -> Décimal
+function binToDec() {
+    const binValue = document.getElementById("binInput").value;
+    const decField = document.getElementById("decInput");
+    
+    if (binValue !== "") {
+        // parseInt(valeur, 2) lit la chaîne comme du binaire et rend du décimal
+        decField.value = parseInt(binValue, 2);
+    } else {
+        decField.value = "";
+    }
+}
+</script>
+</head>
+<body>
+    
+   
+<div class="converter-card">
+    <h2>Module de Conversion Synchrone</h2>
+    
+    <div class="converter-group">
+        <label>Système Décimal</label>
+        <input type="number" id="decInput" placeholder="Ex: 255" oninput="decToBin()">
+    </div>
+
+    <div class="separator">⇄</div>
+
+    <div class="converter-group">
+        <label>Système Binaire</label>
+        <input type="text" id="binInput" placeholder="Ex: 11111111" oninput="binToDec()">
+    </div>
+</div>
+
+
+<a href="hub reseaux.html" class="btn-fixed-retour">
+    <span class="btn-content">
+        <span class="btn-icon">←</span>
+        <span class="btn-text">Retour</span>
+    </span>
+    <div class="btn-glow"></div>
+</a>
+</body>
+</html>
